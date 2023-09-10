@@ -11,3 +11,11 @@ test("Works with numbers", () => {
     const number = 1234;
     expect(reverseString(number)).toBe("4321");
 });
+test("Works with special chars", () => {
+    const number = "!@#$%^&*()_+,./;'[]{}";
+    expect(reverseString(number)).toBe("}{][';/.,+_)(*&^%$#@!");
+});
+test("Preserves caps", () => {
+    const string = "aAbBcC";
+    expect(reverseString(string)).toBe("CcBbAa");
+});
