@@ -23,3 +23,7 @@ test("works with uppercase too", () => {
     const string = "ZZZZ";
     expect(caesarCipher(string, 1)).toBe("aaaa");
 });
+test("works with letters and special chars mixed", () => {
+    const string = "aa#@!bb#@!";
+    expect(caesarCipher(string, 1)).toBe("bb#@!cc#@!");
+});
